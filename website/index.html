@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/abb1c2e7ba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <img src="logo.png" alt="" class="logo">
+        <ul id="menu-links">
+            <li>Home</li>
+            <li>Services</li>
+            <li>Projects</li>
+            <li>About us</li>
+        </ul>
+        <button class="nav-btn">Get started <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+        <div class="menu-icon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <div class="header">
+        <div class="header-content">
+            <h1><span>FREE</span><br><span>LANCER</span></h1>
+            <div class="btn-container">
+                <button class="btn-dark">Request call back<i class="fa-solid fa-phone"></i></button>
+                <button class="btn-light">Know more<i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            </div>
+            <p>Passionate UI/UX designers with 10+ years of experience.</p>
+        </div>
+        <img src="user.png" alt="" class="user-img">
+    </div>
+
+    <script>
+        let navbar = document.querySelector('nav');
+        let menuLinks = document.getElementById('menu-links');
+        function toggleMenu(){
+            menuLinks.classList.toggle('show-menu');
+        }
+        window.onscroll= function(){
+            if(window.scrollY > 0){
+                navbar.style.background = '#eefff9';
+            }else{
+                navbar.style.background = 'transparent';
+            }
+        }
+    </script>
+</body>
+</html>
